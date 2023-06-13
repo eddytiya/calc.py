@@ -80,3 +80,29 @@ draw_spirograph(5)
 
 screen = t.Screen()
 screen.exitonclick()
+
+
+
+
+
+
+
+
+
+
+########################### to manually control a turtle############################################
+from turtle import Turtle,Screen
+
+tim=Turtle()
+
+screen=Screen()
+
+
+def move_forwards():
+    tim.forward(10)
+
+screen.listen()
+screen.onkey(key="space", fun=move_forwards)
+
+
+screen.exitonclick()
