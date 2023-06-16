@@ -1,0 +1,40 @@
+#:1this bit of code opens the file you will not see the file being actually open on your screen it will be opened in the background of the python IDLE
+
+file = open("my_file.txt")
+
+#:2the code below is used to print the file contents in the terminal
+
+contents = file.read()
+print(contents)
+file.close()
+
+'''always remember to close all the files that you open so that all the resources of your computer gets free again'''
+
+#:3 another wat to open file is using 'with' keyword
+
+with open("my_file.txt") as file:
+    contents = file.read()
+    print(contents)
+
+'''this 'with' keyword does not require to use file.close() as it is know to do it'''
+
+#:4 writing in the file
+
+with open("my_file.txt",mode="w") as file:
+    contents = file.write("new text using file.write")
+    print(contents)
+
+'''now when u look at file.txt u will see the old text deleted and new content init'''
+#:5 appending in a file means not replacing the contents of file but adding content into the file
+
+with open("my_file.txt",mode="a") as file:
+    contents = file.write("\n new line of text after write mode is append")
+    print(contents)
+
+
+'''imp thing if u try to open a file that does not exist in write mode then this mode will try to create that file from scratch '''
+with open("new_file.txt",mode="w") as file:
+    contents = file.write("new text using file.write")
+    print(contents)
+
+
