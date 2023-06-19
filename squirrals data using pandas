@@ -1,0 +1,23 @@
+import pandas
+data=pandas.read_csv("2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
+#to know the no of gray squirrels
+gray_squirrels=[data["Primary Fur Color"] == "gray"]
+#print(gray_squirrels)
+
+#count of every squirral
+cinnamon_squirrels_count = len(data[data["Primary Fur Color"] == "Cinnamon"])
+black_squirrels_count = len(data[data["Primary Fur Color"] == "Black"])
+gray_squirrels_count = len(data[data["Primary Fur Color"] == "Gray"])
+print(cinnamon_squirrels_count)
+print(black_squirrels_count)
+print(gray_squirrels_count)
+
+#converting data into dictionary
+data_dict={
+    "fur Color":["Gray","Cinnamon","Black"],
+    "count":[gray_squirrels_count,cinnamon_squirrels_count,black_squirrels_count]
+}
+print(data_dict)
+
+df = pandas.DataFrame(data_dict)
+df.to_csv("squirrel_count.csv")#creates a new file 
