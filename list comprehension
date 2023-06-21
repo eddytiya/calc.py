@@ -10,6 +10,13 @@ for n in numbers:
 new_list.append(add_l)
 print(new_list)
 '''
+
+#the above for loop code using list comprehension
 numbers=[1,2,3]
 new_list=[n+1 for n in numbers]
 print(new_list)
+
+#another small program for list comprehension
+name="Aditya"
+letters_list=[letter for letter in name]
+print(letters_list)
