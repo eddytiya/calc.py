@@ -1,21 +1,18 @@
 #we need this type of output
-    #students_scores = {
-     #  "alex":89,
-      #  "beth":90,
-       # "caroline":88,
-        #"dave":92,
-        #"Eleanor":98,
-        #"freddie":89
-    #}
+   {'alex': 61, 'beth': 50, 'caroline': 40, 'dave': 42, 'Eleanor': 29, 'freddie': 18}
 
 
-
-
-
-
+#creating dictionary through list
 names=["alex", "beth", "caroline", "dave", "Eleanor", "freddie"]
    
 import random
-#stntax:students_names = {newkey:new value for item in names}
+#syntax:students_names = {newkey:new value for item in names}
 students_names = {student:random.randint(1,100) for student in names}
 print(students_names)
+
+#using the output  finding the students who have passed
+passed_students={'alex': 61, 'beth': 50, 'caroline': 40, 'dave': 42, 'Eleanor': 29, 'freddie': 18}
+students_passed = {student:score for (student,score) in students_scores.items() if score>=35}
+print(students_passed)
+
+
