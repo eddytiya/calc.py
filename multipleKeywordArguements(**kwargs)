@@ -6,3 +6,27 @@ def calculate (**kwargs):
 
 
 calculate(add=3,multiply=5)  
+
+
+
+
+
+
+
+def calculate (n, **kwargs):
+    print(kwargs)
+    n += kwargs["add"]
+    n *= kwargs["multiply"]
+    print(n)
+
+
+calculate(2,add=3,multiply=5)
+
+##this code if u dont define model or make u will be shown an error
+class car:
+    def __init__(self,**kw):
+        self.make = kw["make"]
+        self.model=kw["model"]
+
+my_car = car(make="nissan",model="gtr")
+print(my_car.model)
