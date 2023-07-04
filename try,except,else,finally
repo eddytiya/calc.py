@@ -1,0 +1,31 @@
+try:
+    file = open("a_file.txt")
+    a_dictionary={"key":"value"}
+    print(a_dictionary["sadaf"])
+except FileNotFoundError:
+    file=open("a_file.txt","w")
+    file.write("something")
+except KeyError as error_message:
+    print(f"That key{error_message} doesnt exist")
+else:
+    content=file.read()
+    print(content)
+finally:
+    file.close()
+    print("file was close
+
+##################raising an exception###################################
+try:
+    file = open("a_file.txt")
+    a_dictionary={"key":"value"}
+    print(a_dictionary["sadaf"])
+except FileNotFoundError:
+    file=open("a_file.txt","w")
+    file.write("something")
+except KeyError as error_message:
+    print(f"That key{error_message} doesnt exist")
+else:
+    content=file.read()
+    print(content)
+finally:
+   raise TypeError("this is an exception that i made up")
